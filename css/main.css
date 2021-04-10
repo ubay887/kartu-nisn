@@ -1,0 +1,49 @@
+.container {
+    max-width: 60em;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+@media print {
+    .navbar, .jangan-print {
+        display: none;
+    }
+    html {
+        transform: scale(1.0);
+    }
+}
+@font-face {
+    font-family: 'Code39r';
+    src: url('../font/Code39r.ttf');
+}
+.break {
+    page-break-before: always;
+}
+.kartu {
+    width: 8.8cm;
+}
+.kartu-depan {
+    -webkit-print-color-adjust: exact;
+    width: 8.8cm;
+    background-image: url('../img/depan.jpg');
+    background-size: 8.8cm;
+    background-repeat: no-repeat;
+    font-size: 8pt;
+    font-family: Arial;
+    white-space: nowrap;
+}
+.teks-kartu {
+    margin: 2.78cm 0 0 0.03cm;
+}
+.teks-kartu td {
+    margin: 0;
+}
+.qr {
+    width: 1.95cm;
+    height: 1.95cm;
+    margin-right: 0.32cm;
+}
+.t2 {
+    margin-right: 0.5cm;
+}

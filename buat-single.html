@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/moment.js"></script>
+    <script src="./js/qrcode.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/jszip.js"></script>
+    <script src="./js/xlsx.js"></script>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <script src="./js/bootstrap.min.js"></script>
+    <link href="./css/main.css" rel="stylesheet">
+    <title>Kartu NISN</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #040492;">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">KARTU NISN</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" id="beranda">
+                        <a class="nav-link" href="./index.html">Beranda<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item" id="buat">
+                        <a class="nav-link" href="./buat.html">Buat Kartu NISN<span class="sr-only">(current)</span></a>
+                    </li>
+					<li class="nav-item" id="buat-single">
+                        <a class="nav-link" href="./buat-single.html">Buat Kartu NISN Single<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="margin-top:80px;margin-bottom:80px;">
+        <!-- AWAL HALAMAN AWAL -->
+        <div class="jangan-print">
+            <h5>Buat Kartu NISN Single</h5><hr>
+			<p>Untuk membuat kartu NISN dengan data yang banyak, bisa menuju ke halaman ini --> <button onclick="location.href='./buat.html'" class="btn btn-primary">Buat Kartu NISN Banyak</button></li>
+            <ol>
+				<li>Lengkapi data pada kolom isian di bawah ini</li>
+				<li><b>Nama yang terlalu panjang</b> dapat diatasi dengan menyingkatnya agar tidak melewati batas kartu</li>
+				<li>Ubah warna QR-Code sesuai dengan keinginan Anda</li>
+				<li>Tekan tombol Buat jika data sudah lengkap</li>
+				<li>Gulir ke bawah untuk melihat hasil</li>
+				<li>Tekan tombol Cetak</li>
+				<li>Untuk mengulangi dari awal, tekan tombol Reset</li>
+            </ol>
+			<form id="buat-nisn" class="jangan-print">
+				<label for="nisn">NISN:</label>
+				<input class="form-control" type="text" id="nisn">
+				<label for="nama">Nama:</label>
+				<input class="form-control" type="text" id="nama">
+				<label for="tgl-lahir">Tanggal Lahir:</label>
+				<input class="form-control" type="date" id="tgl-lahir">
+				<label for="tempat-lahir">Tempat Lahir:</label>
+				<input class="form-control" type="text" id="tempat-lahir">
+				<label for="jk">Jenis Kelamin:</label>
+				<select id="jk" class="form-control">
+					<option>Laki-laki</option>
+					<option>Perempuan</option>
+				</select>
+				<label for="warna-qr">Warna QR-Code:</label>
+				<select id="warna-qr" class="form-control mb-1">
+					<option value="blue">Biru</option>
+					<option value="red">Merah</option>
+					<option value="black">Hitam</option>
+				</select>
+				<input type="submit" class="form-control btn btn-primary" value="Buat">
+			</form>
+            <hr>
+        </div>
+        <div id="tempat-kartu"></div>
+    </div>
+    <div class="navbar navbar-expand-lg navbar-dark" style="background-color: #040492;bottom: 0;width: 100%; position: absolute;">
+        <div class="container text-center">
+            <span class="navbar-text col-md-12 col-sm-12 col-xs-12">&copy; Amir Sayonara</span>
+        </div>
+    </div>
+</body>
+</html>
